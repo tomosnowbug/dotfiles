@@ -90,4 +90,5 @@ if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
         let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 
-
+"Enable Auto Select first element
+let g:NeoComplCache_EnableAutoSelect = 1
