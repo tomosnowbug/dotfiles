@@ -1,0 +1,4 @@
+git submodule add http://github.com/gmarik/vundle.git ~/dotfiles/vimfiles/vundle.git
+ln -s ~/dotfiles/vimfiles ~/.vim
+
+
