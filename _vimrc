@@ -8,6 +8,7 @@ else
   set rtp+=~/.vim/vundle.git/ 
   call vundle#rc()
 endif
+
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
@@ -17,6 +18,7 @@ filetype plugin indent on
 
 
 if has("win32") || has("win64")
+   set ffs=dos
 else
    set encoding=utf-8
    set ffs=unix
