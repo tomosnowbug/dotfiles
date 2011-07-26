@@ -1,19 +1,32 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+if has("win32") || has("win64")
+  set rtp+=~/vimfiles/vundle.git/ 
+  call vundle#rc('~/vimfiles/bundle/')
+else
+  set rtp+=~/.vim/vundle.git/ 
+  call vundle#rc()
+endif
+
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
 filetype plugin indent on
 
-set encoding=utf-8
+
+
+if has("win32") || has("win64")
+   set ffs=dos
+else
+   set encoding=utf-8
+   set ffs=unix
+endif
+   
 set fileencoding=utf-8
 set termencoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
-set ffs=unix
 set tabstop=4
 
 
