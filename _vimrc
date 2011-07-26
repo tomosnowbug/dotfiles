@@ -30,6 +30,9 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"Enable Auto Select first element
+let g:NeoComplCache_EnableAutoSelect = 1
+let g:NeoComplCache_EnableCursorHoldI = 1
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
@@ -90,5 +93,5 @@ if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
         let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 
-"Enable Auto Select first element
-let g:NeoComplCache_EnableAutoSelect = 1
+
+
