@@ -26,7 +26,7 @@ Host github.com
 User git
 Hostname ssh.github.com
 Port 443
-ProxyCommand /usr/bin/nc -X connect -x proxy.unisys.co.jp:8080 %h %p
+ProxyCommand /usr/bin/nc -X connect -x proxy.example.com:8080 %h %p
 IdentityFile ~/.ssh/id_rsa
 ```
 
