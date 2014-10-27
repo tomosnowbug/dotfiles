@@ -13,7 +13,7 @@ if has('vim_starting')
 		set runtimepath+=$HOME/.vim,$HOME/.vim/after
 	endif
 
-  set runtimepath+=~/.vim/neobundle.vim.git
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 let g:neobundle_default_git_protocol='https'

@@ -1638,7 +1638,6 @@ vimproc-variables	vimproc.txt	/*vimproc-variables*
 vimproc.txt	vimproc.txt	/*vimproc.txt*
 x_<Plug>(neosnippet_expand_target)	neosnippet.txt	/*x_<Plug>(neosnippet_expand_target)*
 x_<Plug>(neosnippet_register_oneshot_snippet)	neosnippet.txt	/*x_<Plug>(neosnippet_register_oneshot_snippet)*
-x_<Plug>(neosnippet_start_unite_snippet_target)	neosnippet.txt	/*x_<Plug>(neosnippet_start_unite_snippet_target)*
 x_<Plug>TComment_<Leader>__	tcomment.txt	/*x_<Plug>TComment_<Leader>__*
 x_<Plug>TComment_<Leader>_i	tcomment.txt	/*x_<Plug>TComment_<Leader>_i*
 x_<Plug>TComment_Comment	tcomment.txt	/*x_<Plug>TComment_Comment*
