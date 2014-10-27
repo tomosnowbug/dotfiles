@@ -14,7 +14,7 @@ if has('vim_starting')
 	endif
 
   set runtimepath+=~/.vim/neobundle.vim.git
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 let g:neobundle_default_git_protocol='https'
 
@@ -23,10 +23,11 @@ let g:neobundle_default_git_protocol='https'
 " vimprocのビルドをWindowsで行うときはMinGW/Msysが必要。PATHを通す
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
-      \     'windows' : 'make -f make_mingw64.mak',
+      \     'windows' : 'tools\\update-dll-mingw',
       \     'cygwin' : 'make -f make_cygwin.mak',
       \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
+      \     'unix' : 'gmake',
+      \     'linux' : 'make',
       \    },
       \ }
 NeoBundle 'tpope/vim-endwise.git'
@@ -39,7 +40,7 @@ NeoBundle 'Shougo/vimfiler'
 "NeoBundle 'grep.vim'
 "NeoBundle 'gtags.vim'
 NeoBundle 'https://github.com/LeafCage/foldCC.git'
-NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
+NeoBundle 'Shougo/unite-outline.git'
 NeoBundle 'istepura/vim-toolbar-icons-silk'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'itchyny/landscape.vim'
@@ -78,6 +79,7 @@ NeoBundle 'anekos/char-counter-vim'
 NeoBundle 'kien/ctrlp.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call neobundle#end()
 
 filetype plugin on
 filetype indent on
