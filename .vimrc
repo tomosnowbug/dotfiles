@@ -44,22 +44,6 @@ NeoBundle 'Shougo/unite-outline.git'
 NeoBundle 'istepura/vim-toolbar-icons-silk'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'itchyny/landscape.vim'
-"  let g:Powerline_theme = 'landscape'
-"  let g:Powerline_colorscheme = 'landscape'
-"  let g:airline_theme = 'landscape'
-
-"NeoBundle 'bling/vim-airline'
-"  let g:airline_enable_branch = 0
-"  let g:airline_section_b = "%t %M"
-"  let g:airline_section_c = ''
-"  let s:sep = " %{get(g:, 'airline_right_alt_sep', '')} "
-"  let g:airline_section_x =
-"        \ "%{strlen(&fileformat)?&fileformat:''}".s:sep.
-"        \ "%{strlen(&fenc)?&fenc:&enc}".s:sep.
-"        \ "%{strlen(&filetype)?&filetype:'no ft'}"
-"  let g:airline_section_y = '%3p%%'
-"  let g:airline_section_z = get(g:, 'airline_linecolumn_prefix', '').'%3l:%-2v'
-"  let g:airline#extensions#whitespace#enabled = 0
 
 " 補完
 NeoBundle 'Shougo/neocomplcache'
@@ -70,7 +54,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'tomtom/tcomment_vim'
 "NeoBundle 'taichouchou2/surround.vim'
 
-"
+
 "
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'sudo.vim'
