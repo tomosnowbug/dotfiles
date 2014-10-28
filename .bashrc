@@ -225,6 +225,9 @@ export https_proxy=http://proxy.unisys.co.jp:8080
 
 export TERM='xterm-256color'
 
+#cocot
+iscocot=$(type cocot 2> /dev/null)
+if [ $? -eq 0 ]; then
 
 alias ping='cocot ping'
 alias ifconfig='cocot ifconfig'
@@ -234,6 +237,7 @@ alias nslookup='cocot nslookup'
 alias ant='cocot ant'
 #alias ='cocot '
 
+fi
 
 #now=$(date)
 #echo "END bashrc: $now"
