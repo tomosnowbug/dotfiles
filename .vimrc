@@ -309,7 +309,7 @@ if ! empty(neobundle#get("lightline.vim"))
     \"colorscheme": "jellybeans",
     \"active": {
       \"left": [["mode", "filename"], ["fugitive"]],
-      \"right": [["charcounter"], ["lineinfo"], ["fileinfo"] ]},
+      \"right": [["lineinfo"], ["fileinfo"] ]},
     \"component_visible_condition": {
       \"fugitive": '(exists("*fugitive#head") && ""!=fugitive#head())'},
     \'component_function': {
