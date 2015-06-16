@@ -9,6 +9,6 @@ ln -sf ${PWD}/.tmux.conf ~/.tmux.conf
 
 ln -sf ${PWD}/.bashrc ~/.bashrc
 ln -sf ${PWD}/.bashrc_forcygwin ~/.bashrc_forcygwin
-ln -sf ${PWD}/.bash_alias ~/.bash_alias
+ln -sf ${PWD}/.bash_aliases ~/.bash_aliases
 #ln -sf ${PWD}/.
 
