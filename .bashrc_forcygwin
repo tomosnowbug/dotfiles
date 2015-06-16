@@ -1,0 +1,55 @@
+
+#for CYGWIN env ansible ssh error
+export ANSIBLE_SSH_ARGS="-o ControlMaster=no"
+
+
+# cocot related aliases...
+iscocot=$(type cocot 2> /dev/null)
+if [ $? -eq 0 ]; then
+        alias ping='cocot ping'
+        alias ifconfig='cocot ifconfig'
+        alias tracert='cocot tracert'
+        alias ssheuc='TERM=xterm-256color cocot -t UTF-8 -p EUC-JP ssh '
+        alias nslookup='cocot nslookup'
+        alias ant='cocot ant'
+fi
+
+alias open="/bin/cygstart `/bin/cygpath .`"
+
+function exp {
+        /bin/cygstart `/bin/cygpath -aw $*`
+}
+
+function ln {
+  opt="/H"
+  if [ "$1" = "-s" ];then
+    opt=""
+    shift
+  fi
+  target="$1"
+  if [ -d "$target" ];then
+    opt="/D $opt"
+  fi
+  if [ $# -eq 2 ];then
+    link="$2"
+  elif [ $# -eq 1 ];then
+    link=`basename "$target"`
+  else
+    echo "usage: ln [-s] <target> [<link>]"
+    echo "       -s for symbolic link, otherwise make hard link"
+    return
+  fi
+  #t_winpath=$(/bin/cygpath -w -a "$target")
+  #t_link=$(/bin/cygpath -w -a "$link")
+  t_winpath="$(/bin/cygpath -w -a "$target")"
+  t_link="$(/bin/cygpath -w -a "$link")"
+  echo "cmd /c mklink $opt $t_link $t_winpath"
+  cocot cmd /c mklink $opt "`/bin/cygpath -w -a \"$link\"`" "`/bin/cygpath -w -a \"$target\"`"
+      echo "done."
+}
+
+
+
+
+
+
