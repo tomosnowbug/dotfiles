@@ -1,8 +1,3 @@
-
-#now=$(date)
-#echo "START bashrc: $now"
-
-
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
 # public domain worldwide. This software is distributed without any warranty. 
@@ -10,7 +5,7 @@
 # with this software. 
 # If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
 
-# base-files version 4.1-1
+# base-files version 4.2-3
 
 # ~/.bashrc: executed by bash(1) for interactive shells.
 
@@ -202,42 +197,17 @@
 # 
 # alias cd=cd_func
 
-
-
-alias grep='grep --color'                     # show differences in colour
-alias egrep='egrep --color=auto'              # show differences in colour
-alias fgrep='fgrep --color=auto'              # show differences in colour
-
-# Some shortcuts for different directory listings
-alias ls='ls -hF --color=tty'                 # classify files in colour
-alias ll='ls -l'                              # long list
-alias la='ls -Al'                              # all but . and ..
-alias l='ls -CF'                              #
-
-alias vi=vim
-alias view='vim -R'
-
-alias tmux='tmux -2' #support 256color
-
-export LANG=ja_JP.utf8
-export http_proxy=http://proxy.unisys.co.jp:8080
-export https_proxy=http://proxy.unisys.co.jp:8080
-
-export TERM='xterm-256color'
-
-#cocot
-iscocot=$(type cocot 2> /dev/null)
-if [ $? -eq 0 ]; then
-
-alias ping='cocot ping'
-alias ifconfig='cocot ifconfig'
-alias tracert='cocot tracert'
-alias ssheuc='TERM=xterm-256color cocot -t UTF-8 -p EUC-JP ssh '
-alias nslookup='cocot nslookup'
-alias ant='cocot ant'
-#alias ='cocot '
-
+# for cygwin
+if [[ "$OSTYPE" =~ "cygwin" ]];then
+  if [ -f "${HOME}/.bashrc_forcygwin" ] ; then
+    source "${HOME}/.bashrc_forcygwin"
+  fi
 fi
 
-#now=$(date)
-#echo "END bashrc: $now"
+# for aliases
+if [ -f "${HOME}/.bash_aliases" ] ; then
+  source "${HOME}/.bash_aliases"
+fi
+
+
+
