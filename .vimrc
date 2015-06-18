@@ -295,9 +295,9 @@ set foldlevel=5
 "TODO: zR/zM
 
 "inoremap F <C-O>za
-nnoremap F za
-onoremap F <C-C>za
-vnoremap F zf
+nnoremap zz za
+onoremap zz <C-C>za
+vnoremap zz zf
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
